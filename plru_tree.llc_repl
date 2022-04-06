@@ -5,15 +5,6 @@
 
 bool plru[LLC_SET][NNODOS]; //Este array se va a tratar como un arbol binario:
 
-/*
-array indices: 0 1 2 3 4 5 6 
-visualizacion como arbol
-
-    3       4      5       6                
-        1              2
-                0
-
-*/
 
 const int minIndexToLeaf = NNODOS;
 /*
@@ -98,13 +89,6 @@ void CACHE::llc_update_replacement_state(uint32_t cpu, uint32_t set, uint32_t wa
     if (hit && (type == WRITEBACK)) // writeback hit does not update LRU state
         return;
 
-    /*
-        hijo derecho implica indice par:
-            hijoDerecho(n) = n*2+2 = 2 * (n+1) -> par
-        por tanto como el hijo derecho es par
-        el hijo izquierdo es impar
-            hijoIzq(n) = 2*n+1 -> impar
-    */
     int p = way + minIndexToLeaf;
 
     while (p != 0)
