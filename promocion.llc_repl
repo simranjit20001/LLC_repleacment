@@ -6,15 +6,7 @@
 bool plru[LLC_SET][N_NODOS]; //Este array se va a tratar como un arbol binario:
 int vectorPromocion[] = {0, 0, 1, 0, 3, 0, 1, 2, 1, 0, 5, 1, 0, 0, 1, 11, 13};
 
-/*
-array indices: 0 1 2 3 4 5 6 
-visualizacion como arbol
 
-    3       4      5       6                
-        1              2
-                0
-
-*/
 
 const int minIndexToLeaf = N_NODOS;  
 /*
