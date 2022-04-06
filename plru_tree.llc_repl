@@ -1,0 +1,127 @@
+#include "cache.h"
+#define RIGHT true
+#define LEFT false
+#define NNODOS LLC_WAY-1
+
+bool plru[LLC_SET][NNODOS]; //Este array se va a tratar como un arbol binario:
+
+/*
+array indices: 0 1 2 3 4 5 6 
+visualizacion como arbol
+
+    3       4      5       6                
+        1              2
+                0
+
+*/
+
+const int minIndexToLeaf = NNODOS;
+/*
+    los nodos del arbol estan identificados por su indice; asi la raiz es a[0] su hijo izq. a[1] y su hijo der. [a2]
+
+*/
+
+// initialize replacement state
+void CACHE::llc_initialize_replacement()
+{
+    if(LLC_WAY%2)
+        assert(0);
+}
+
+// find replacement victim
+uint32_t CACHE::llc_find_victim(uint32_t cpu, uint64_t instr_id, uint32_t set, const BLOCK *current_set, uint64_t ip, uint64_t full_addr, uint32_t type)
+{
+    uint32_t way = 0;
+
+    // fill invalid line first
+    for (way = 0; way < NUM_WAY; way++)
+    {
+        if (block[set][way].valid == false)
+        {
+            break;
+        }
+    }
+
+
+    if (way == NUM_WAY)
+    {
+        const uint32_t root = 0;
+        uint32_t p = root;
+        while (p < minIndexToLeaf)
+        {
+            if (plru[set][p] == RIGHT)
+                p = p * 2 + 2;
+            else
+                p = p * 2 + 1;
+        }
+
+        way = p - minIndexToLeaf;
+    }
+    
+    if (way >= NUM_WAY)
+    {
+        cerr << "[" << NAME << "] " << __func__ << " no victim! set: " << set << endl;
+        assert(0); //no deberia entrar aqui
+    }
+
+    return way;
+}
+
+// called on every cache hit and cache fill
+void CACHE::llc_update_replacement_state(uint32_t cpu, uint32_t set, uint32_t way, uint64_t full_addr, uint64_t ip, uint64_t victim_addr, uint32_t type, uint8_t hit)
+{
+    string TYPE_NAME;
+    if (type == LOAD)
+        TYPE_NAME = "LOAD";
+    else if (type == RFO)
+        TYPE_NAME = "RFO";
+    else if (type == PREFETCH)
+        TYPE_NAME = "PF";
+    else if (type == WRITEBACK)
+        TYPE_NAME = "WB";
+    else
+        assert(0);
+
+    if (hit)
+        TYPE_NAME += "_HIT";
+    else
+        TYPE_NAME += "_MISS";
+
+    if ((type == WRITEBACK) && ip)
+        assert(0);
+
+    // uncomment this line to see the LLC accesses
+    // cout << "CPU: " << cpu << "  LLC " << setw(9) << TYPE_NAME << " set: " << setw(5) << set << " way: " << setw(2) << way;
+    // cout << hex << " paddr: " << setw(12) << paddr << " ip: " << setw(8) << ip << " victim_addr: " << victim_addr << dec << endl;
+
+    // baseline LRU
+    if (hit && (type == WRITEBACK)) // writeback hit does not update LRU state
+        return;
+
+    /*
+        hijo derecho implica indice par:
+            hijoDerecho(n) = n*2+2 = 2 * (n+1) -> par
+        por tanto como el hijo derecho es par
+        el hijo izquierdo es impar
+            hijoIzq(n) = 2*n+1 -> impar
+    */
+    int p = way + minIndexToLeaf;
+
+    while (p != 0)
+    {
+        if (p % 2)
+        {
+            p = p / 2;
+            plru[set][p] = RIGHT; 
+        }
+        else
+        {
+            p = (p - 1) / 2;
+            plru[set][p] = LEFT;
+        }
+    }
+}
+
+void CACHE::llc_replacement_final_stats()
+{
+}

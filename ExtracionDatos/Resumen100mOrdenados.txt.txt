@@ -1,0 +1,230 @@
+./607.cactuBSSN_s-2421B.champsimtrace.xz.csv
+lru, 1.19844
+ship, 1.19624
+plru_tree, 1.18899
+srrip, 1.18376
+plru_basic, 1.18027
+drrip, 1.17795
+promocion, 1.14581
+------------------------------
+------------------------------
+./657.xz_s-56B.champsimtrace.xz.csv
+drrip, 1.66483
+ship, 1.66481
+srrip, 1.66479
+promocion, 1.66479
+plru_tree, 1.66479
+plru_basic, 1.66479
+lru, 1.66479
+------------------------------
+------------------------------
+./603.bwaves_s-3699B.champsimtrace.xz.csv
+ship, 1.19825
+srrip, 1.19771
+promocion, 1.19747
+drrip, 1.19673
+lru, 1.1966
+plru_tree, 1.19656
+plru_basic, 1.19649
+------------------------------
+------------------------------
+./654.roms_s-842B.champsimtrace.xz.csv
+drrip, 1.0185
+ship, 1.01824
+srrip, 1.01807
+promocion, 1.01807
+plru_tree, 1.01807
+plru_basic, 1.01807
+lru, 1.01807
+------------------------------
+------------------------------
+./649.fotonik3d_s-1176B.champsimtrace.xz.csv
+srrip, 0.63052
+ship, 0.629303
+promocion, 0.626763
+plru_basic, 0.614545
+drrip, 0.613525
+plru_tree, 0.613033
+lru, 0.613028
+------------------------------
+------------------------------
+./648.exchange2_s-1699B.champsimtrace.xz.csv
+srrip, 1.31072
+promocion, 1.31072
+plru_tree, 1.31072
+plru_basic, 1.31072
+lru, 1.31072
+ship, 1.31069
+drrip, 1.31067
+------------------------------
+------------------------------
+./602.gcc_s-734B.champsimtrace.xz.csv
+ship, 0.456899
+promocion, 0.452798
+drrip, 0.44403
+srrip, 0.439931
+plru_basic, 0.439677
+plru_tree, 0.439192
+lru, 0.439187
+------------------------------
+------------------------------
+./620.omnetpp_s-874B.champsimtrace.xz.csv
+ship, 0.340377
+srrip, 0.337642
+drrip, 0.337421
+lru, 0.336863
+plru_tree, 0.336551
+plru_basic, 0.335715
+promocion, 0.330355
+------------------------------
+------------------------------
+./600.perlbench_s-210B.champsimtrace.xz.csv
+drrip, 1.40459
+ship, 1.40456
+srrip, 1.40447
+promocion, 1.40447
+plru_tree, 1.40447
+plru_basic, 1.40447
+lru, 1.40447
+------------------------------
+------------------------------
+./623.xalancbmk_s-700B.champsimtrace.xz.csv
+ship, 0.593981
+drrip, 0.593906
+promocion, 0.591956
+lru, 0.591812
+plru_tree, 0.591717
+plru_basic, 0.591264
+srrip, 0.591097
+------------------------------
+------------------------------
+./628.pop2_s-17B.champsimtrace.xz.csv
+ship, 1.18096
+srrip, 1.17921
+lru, 1.17308
+plru_tree, 1.17035
+drrip, 1.16776
+plru_basic, 1.16286
+promocion, 1.10493
+------------------------------
+------------------------------
+./619.lbm_s-4268B.champsimtrace.xz.csv
+promocion, 0.412648
+lru, 0.404613
+plru_tree, 0.403536
+ship, 0.401822
+drrip, 0.394029
+srrip, 0.386592
+plru_basic, 0.381527
+------------------------------
+------------------------------
+./621.wrf_s-575B.champsimtrace.xz.csv
+drrip, 1.08439
+srrip, 1.08438
+ship, 1.08438
+promocion, 1.08438
+plru_tree, 1.08438
+plru_basic, 1.08438
+lru, 1.08438
+------------------------------
+------------------------------
+./657.xz_s-3167B.champsimtrace.xz.csv
+ship, 1.01334
+lru, 1.00989
+drrip, 1.00967
+srrip, 1.00842
+plru_tree, 1.00819
+plru_basic, 1.00671
+promocion, 0.99946
+------------------------------
+------------------------------
+./644.nab_s-5853B.champsimtrace.xz.csv
+srrip, 1.19644
+ship, 1.19644
+promocion, 1.19644
+plru_tree, 1.19644
+lru, 1.19643
+plru_basic, 1.19641
+drrip, 1.19639
+------------------------------
+------------------------------
+./657.xz_s-4994B.champsimtrace.xz.csv
+drrip, 1.21726
+ship, 1.2172
+srrip, 1.21719
+promocion, 1.21719
+plru_tree, 1.21719
+plru_basic, 1.21719
+lru, 1.21719
+------------------------------
+------------------------------
+./638.imagick_s-10316B.champsimtrace.xz.csv
+srrip, 2.36791
+promocion, 2.36791
+plru_tree, 2.36791
+plru_basic, 2.36791
+lru, 2.36791
+drrip, 2.36767
+ship, 2.36756
+------------------------------
+------------------------------
+./625.x264_s-18B.champsimtrace.xz.csv
+promocion, 1.52755
+plru_basic, 1.5274
+drrip, 1.52699
+plru_tree, 1.52695
+ship, 1.5268
+srrip, 1.52669
+lru, 1.52667
+------------------------------
+------------------------------
+./631.deepsjeng_s-928B.champsimtrace.xz.csv
+ship, 0.963489
+srrip, 0.963478
+promocion, 0.963366
+drrip, 0.9631
+lru, 0.963011
+plru_tree, 0.962991
+plru_basic, 0.962973
+------------------------------
+------------------------------
+./641.leela_s-800B.champsimtrace.xz.csv
+ship, 0.756178
+srrip, 0.756168
+promocion, 0.756168
+plru_tree, 0.756168
+plru_basic, 0.756168
+lru, 0.756168
+drrip, 0.756164
+------------------------------
+------------------------------
+./657.xz_s-2302B.champsimtrace.xz.csv
+ship, 0.799248
+lru, 0.792366
+drrip, 0.791434
+srrip, 0.790692
+plru_tree, 0.7897
+plru_basic, 0.787846
+promocion, 0.779001
+------------------------------
+------------------------------
+./627.cam4_s-573B.champsimtrace.xz.csv
+ship, 1.14199
+promocion, 1.13699
+lru, 1.13553
+srrip, 1.1351
+plru_tree, 1.13449
+drrip, 1.13236
+plru_basic, 1.12373
+------------------------------
+------------------------------
+./605.mcf_s-665B.champsimtrace.xz.csv
+ship, 0.402132
+srrip, 0.379378
+drrip, 0.378441
+lru, 0.369333
+plru_tree, 0.367394
+plru_basic, 0.362341
+promocion, 0.3271
+------------------------------
+------------------------------
